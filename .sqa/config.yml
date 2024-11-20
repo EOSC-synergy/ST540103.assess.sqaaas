@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/profskipulag/ST540103:
+      branch: main
+      repo: https://github.com/profskipulag/ST540103
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/profskipulag/ST540103 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-pumpkin-tzu.sh
+        container: qc.acc_lanky-charcoal-cow
+  QC.Doc:
+    repos:
+      github.com/profskipulag/ST540103 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-firebrick-crab.sh
+        container: qc.doc_craggy-amaranth-caiman
+      github.com/profskipulag/ST540103 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-pink-harrier.sh
+        container: qc.doc_sleazy-ivory-moorhen
+      github.com/profskipulag/ST540103 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-silver-lion.sh
+        container: qc.doc_flaky-yellow-termite
+  QC.Lic:
+    repos:
+      github.com/profskipulag/ST540103 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-blue-jackal.sh
+        container: qc.lic_snippy-denim-catfish
+  QC.Sec:
+    repos:
+      github.com/profskipulag/ST540103 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-buff-kakapo.sh
+        container: qc.sec_silly-brass-wolf
+  QC.Sty:
+    repos:
+      github.com/profskipulag/ST540103 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-heliotrope-turkey.sh
+        container: qc.sty_trippy-orchid-cougar
+  QC.Uni:
+    repos:
+      github.com/profskipulag/ST540103 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-bronze-devil.sh
+        container: qc.uni_lumpy-thistle-earwig
+  QC.Ver:
+    repos:
+      github.com/profskipulag/ST540103 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-emerald-opossum.sh
+        container: qc.ver_clammy-orchid-shark
+timeout: 5400
