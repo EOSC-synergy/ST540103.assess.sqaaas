@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/profskipulag/ST540103 git:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-crimson-boar.sh
-        container: qc.acc_sunny-blue-burmese
+        - /usr/bin/env sh .sqa/script.sleepy-chocolate-bandicoot.sh
+        container: qc.acc_trippy-ivory-setter
   QC.Doc:
     repos:
       github.com/profskipulag/ST540103 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-cream-mastiff.sh
-        container: qc.doc_bluesy-crimson-goose
+        - /usr/bin/env sh .sqa/script.greasy-wisteria-vulture.sh
+        container: qc.doc_scaly-copper-ant
       github.com/profskipulag/ST540103 git:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-tomato-dachsbracke.sh
-        container: qc.doc_shaggy-mustard-octopus
+        - /usr/bin/env sh .sqa/script.homely-fuchsia-eleuth.sh
+        container: qc.doc_lumpy-asparagus-tamarin
       github.com/profskipulag/ST540103 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-ruby-shrew.sh
-        container: qc.doc_pretty-cinnabar-millipede
+        - /usr/bin/env sh .sqa/script.cheeky-carmine-alligator.sh
+        container: qc.doc_zippy-auburn-ostrich
   QC.Lic:
     repos:
       github.com/profskipulag/ST540103 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-cerise-clam.sh
-        container: qc.lic_sickly-celadon-barb
+        - /usr/bin/env sh .sqa/script.homey-jade-mammoth.sh
+        container: qc.lic_muzzy-burgundy-devil
   QC.Sec:
     repos:
       github.com/profskipulag/ST540103 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-lilac-rattlesnake.sh
-        container: qc.sec_paltry-chocolate-hound
+        - /usr/bin/env sh .sqa/script.sunny-seashell-peccary.sh
+        container: qc.sec_clammy-aquamarine-tarantula
   QC.Sty:
     repos:
       github.com/profskipulag/ST540103 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-flax-gopher.sh
-        container: qc.sty_shaggy-green-tzu
+        - /usr/bin/env sh .sqa/script.sickly-vermilion-giraffe.sh
+        container: qc.sty_geeky-orange-donkey
   QC.Uni:
     repos:
       github.com/profskipulag/ST540103 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-teal-owl.sh
-        container: qc.uni_sloppy-platinum-nightingale
+        - /usr/bin/env sh .sqa/script.stinky-amaranth-civet.sh
+        container: qc.uni_nerdy-corn-zebu
   QC.Ver:
     repos:
       github.com/profskipulag/ST540103 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-grey-beagle.sh
-        container: qc.ver_goopy-yellow-koala
+        - /usr/bin/env sh .sqa/script.trippy-pear-antelope.sh
+        container: qc.ver_pretty-rust-rhinoceros
 timeout: 5400
